@@ -48,18 +48,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:srcCompat="@android:drawable/presence_online" />
+        app:srcCompat="@drawable/projekti_nappi170px" />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="40dp"
+        android:layout_width="79dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/presence_away" />
+        app:srcCompat="@drawable/projekti_nappitesti" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -70,6 +70,6 @@
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/star_big_on" />
+        app:srcCompat="@drawable/projekti_nappi270px" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
