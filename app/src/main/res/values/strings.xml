@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="start">START</string>
     <string name="greeting">How's your day?</string>
+    <string name="great">GREAT</string>
+    <string name="fine">FINE</string>
 </resources>
