@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ public class Calendar extends AppCompatActivity {
     private static boolean notGreatPressed = false;
     private static boolean badPressed = false;
     private static boolean awfulPressed = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +37,6 @@ public class Calendar extends AppCompatActivity {
 
         days.setAdapter(gridViewArrayAdapter);
 
-       /* public static void greatDay() {
-            dayzList.add(dayzList.size(),"Today was a great day");
-            gridViewArrayAdapter.notifyDataSetChanged();
 
-
-        } */
     }
 }
