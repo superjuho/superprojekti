@@ -4,4 +4,7 @@
     <string name="greeting">How's your day?</string>
     <string name="great">GREAT</string>
     <string name="fine">FINE</string>
+    <string name="not_great">NOT GREAT</string>
+    <string name="bad">BAD</string>
+    <string name="awful">Awful</string>
 </resources>

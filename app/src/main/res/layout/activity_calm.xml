@@ -16,7 +16,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="20dp"
-        android:text="Button"
+        android:text="@string/great"
         app:layout_constraintBottom_toTopOf="@+id/Fine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="20dp"
-        android:text="Button"
+        android:text="@string/fine"
         app:layout_constraintBottom_toTopOf="@+id/ngreat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,7 +45,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="20dp"
-        android:text="Button"
+        android:text="@string/not_great"
         app:layout_constraintBottom_toTopOf="@+id/bad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -59,7 +59,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="20dp"
-        android:text="Button"
+        android:text="@string/bad"
         app:layout_constraintBottom_toTopOf="@+id/awful"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -73,7 +73,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="227dp"
-        android:text="Button"
+        android:text="@string/awful"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
