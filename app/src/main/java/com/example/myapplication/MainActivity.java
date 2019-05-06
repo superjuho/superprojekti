@@ -22,5 +22,6 @@ Button start;
     public void onButtonClick(View v) {
         Lol++;
         Log.d(TAG,"Täällä ollaan");
+        Log.d(TAG,"Vittu mitä pasoaa");
     }
 }
