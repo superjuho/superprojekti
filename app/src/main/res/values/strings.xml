@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="start">START</string>
-    <string name="greeting">How's your day?</string>
+    <string name="greeting">"How's your day?"</string>
     <string name="great">GREAT</string>
     <string name="fine">FINE</string>
     <string name="not_great">NOT GREAT</string>
     <string name="bad">BAD</string>
     <string name="awful">Awful</string>
+    <string name="today">Today was…</string>
 </resources>
