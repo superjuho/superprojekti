@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 private String TAG = "Tässä";
 private int Lol = 0;
 Button start;
-View v;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +19,8 @@ View v;
         start = findViewById(R.id.button);
     }
 
-    StartButtonClick(View a) {
+    public void onButtonClick(View v) {
         Lol++;
-        Log.d(TAG, "Start nappulaa painettu");
-
+        Log.d(TAG,"Täällä ollaan");
     }
 }
