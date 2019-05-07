@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
@@ -25,7 +26,7 @@ public class Calendar extends AppCompatActivity {
     private static boolean badPressed = false;
     private static boolean awfulPressed = false;
     private static boolean calendarHomeButtonPressed = false;
-
+    
 
     SharedPreferences shared;
 
@@ -92,13 +93,6 @@ public class Calendar extends AppCompatActivity {
             set.addAll(dayzList);
             editor.putStringSet("DATE_LIST", set);
             editor.apply();
-
-
-
-
-
-
-
 
     }
 
