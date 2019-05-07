@@ -23,4 +23,9 @@ Button start;
     public void onButtonClick(View v) {
         startActivity(new Intent(MainActivity.this, Calm.class));
     }
+
+    public void calendarHomeButtonClick(View v) {
+        startActivity(new Intent(MainActivity.this, Calendar.class));
+    }
 }
+
