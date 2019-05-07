@@ -9,11 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
 
-
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 public class Calendar extends AppCompatActivity {
@@ -22,6 +24,7 @@ public class Calendar extends AppCompatActivity {
     private static boolean notGreatPressed = false;
     private static boolean badPressed = false;
     private static boolean awfulPressed = false;
+
 
     SharedPreferences shared;
 
@@ -41,32 +44,35 @@ public class Calendar extends AppCompatActivity {
                 (this, android.R.layout.simple_list_item_1, dayzList);
 
         days.setAdapter(gridViewArrayAdapter);
+
+        String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+
         if (greatPressed) {
-            dayzList.add(dayzList.size(),"Great day!");
+            dayzList.add(dayzList.size(),"Great day!\n" + date);
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             greatPressed = false;
         } else if (awfulPressed) {
-            dayzList.add(dayzList.size(),"Awful day");
+            dayzList.add(dayzList.size(),"Awful day\n" + date);
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             awfulPressed = false;
         } else if (finePressed) {
-            dayzList.add(dayzList.size(),"Fine day");
+            dayzList.add(dayzList.size(),"Fine day\n" + date);
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             finePressed = false;
         } else if (notGreatPressed) {
-            dayzList.add(dayzList.size(),"Not great..");
+            dayzList.add(dayzList.size(),"Not great..\n" + date);
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             notGreatPressed = false;
         } else if (badPressed) {
-            dayzList.add(dayzList.size(),"Bad day");
+            dayzList.add(dayzList.size(),"Bad day\n" + date);
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
