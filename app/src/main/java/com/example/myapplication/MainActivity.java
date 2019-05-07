@@ -29,8 +29,8 @@ Button start;
         startActivity(new Intent(MainActivity.this, Calendar.class));
     }
 
-    /*public void relaxHomeButtonClick (View v) {
+    public void relaxHomeButtonClick (View v) {
         startActivity(new Intent(MainActivity.this, Relax.class));
-    }*/
+    }
 }
 

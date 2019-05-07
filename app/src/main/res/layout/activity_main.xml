@@ -59,11 +59,11 @@
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
         android:layout_marginBottom="32dp"
+        android:background="@null"
+        android:onClick="relaxHomeButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@null"
-        app:srcCompat="@drawable/projekti_nappitesti"
-        />
+        app:srcCompat="@drawable/projekti_nappitesti" />
 
     <ImageButton
         android:id="@+id/imageButton3"
