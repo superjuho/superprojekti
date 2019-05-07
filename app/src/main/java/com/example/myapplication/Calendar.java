@@ -24,6 +24,7 @@ public class Calendar extends AppCompatActivity {
     private static boolean notGreatPressed = false;
     private static boolean badPressed = false;
     private static boolean awfulPressed = false;
+    private static boolean calendarHomeButtonPressed = false;
 
 
     SharedPreferences shared;
@@ -77,6 +78,13 @@ public class Calendar extends AppCompatActivity {
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             badPressed = false;
+        } else if (calendarHomeButtonPressed) {
+
+            gridViewArrayAdapter.notifyDataSetChanged();
+            Set<String> set = shared.getStringSet("DATE_LIST", null);
+            dayzList.addAll(set);
+            calendarHomeButtonPressed = false;
+
         }
 
             SharedPreferences.Editor editor = shared.edit();
@@ -116,6 +124,10 @@ public class Calendar extends AppCompatActivity {
 
     public static void badPressed() {
         badPressed = true;
+    }
+
+    public static void calendarHomeButtonPressed() {
+        calendarHomeButtonPressed = true;
     }
 
 
