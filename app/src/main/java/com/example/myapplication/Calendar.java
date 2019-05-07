@@ -4,6 +4,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
@@ -26,7 +27,7 @@ public class Calendar extends AppCompatActivity {
     private static boolean badPressed = false;
     private static boolean awfulPressed = false;
     private static boolean calendarHomeButtonPressed = false;
-    
+
 
     SharedPreferences shared;
 
@@ -51,30 +52,35 @@ public class Calendar extends AppCompatActivity {
 
         if (greatPressed) {
             dayzList.add(dayzList.size(),"Great day!\n" + date);
+            days.setBackgroundColor(Color.parseColor("#161fff"));
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             greatPressed = false;
         } else if (awfulPressed) {
             dayzList.add(dayzList.size(),"Awful day\n" + date);
+            days.setBackgroundColor(Color.parseColor("#ad0202"));
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             awfulPressed = false;
         } else if (finePressed) {
             dayzList.add(dayzList.size(),"Fine day\n" + date);
+            days.setBackgroundColor(Color.parseColor("#34a873"));
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             finePressed = false;
         } else if (notGreatPressed) {
             dayzList.add(dayzList.size(),"Not great..\n" + date);
+            days.setBackgroundColor(Color.parseColor("#898989"));
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             notGreatPressed = false;
         } else if (badPressed) {
             dayzList.add(dayzList.size(),"Bad day\n" + date);
+            days.setBackgroundColor(Color.parseColor("#5a0001"));
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
@@ -93,6 +99,8 @@ public class Calendar extends AppCompatActivity {
             set.addAll(dayzList);
             editor.putStringSet("DATE_LIST", set);
             editor.apply();
+
+
 
     }
 
@@ -127,8 +135,11 @@ public class Calendar extends AppCompatActivity {
 
 
 
+    }
 
 
 
 
-}
+
+
+
