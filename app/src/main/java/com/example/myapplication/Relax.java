@@ -29,12 +29,12 @@ public class Relax extends Activity {
                 R.layout.relaxlist,
                 myItems);
 
-        ListView list = (ListView) findViewById(R.id.relaxlist);
+        ListView list = findViewById(R.id.relaxlist);
         list.setAdapter(adapter);
     }
 
     private void registerClickCallback() {
-        ListView list = (ListView) findViewById(R.id.relaxlist);
+        ListView list = findViewById(R.id.relaxlist);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> paret, View viewClicked, int position, long id) {
