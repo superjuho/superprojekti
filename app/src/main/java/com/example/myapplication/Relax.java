@@ -1,20 +1,21 @@
 package com.example.myapplication;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class Relax extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class Relax extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_relax);
 
         populateListView();
         registerClickCallback();
@@ -24,7 +25,7 @@ public class Relax extends Activity {
     private void populateListView() {
         String[] myItems = {"Relax1", "Relax2", "Relax3", "Relax4"};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> adapter = new ArrayAdapter(
                 this,
                 R.layout.relaxlist,
                 myItems);
@@ -32,16 +33,30 @@ public class Relax extends Activity {
         ListView list = findViewById(R.id.relaxlist);
         list.setAdapter(adapter);
     }
-
-    private void registerClickCallback() {
+    private void registerClickCallback(){
         ListView list = findViewById(R.id.relaxlist);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> paret, View viewClicked, int position, long id) {
-                TextView textView = (TextView) viewClicked;
-                String message = "You clicked # " + position
-                        + ", which is string: " + textView.getText().toString();
-                Toast.makeText(Relax.this, message, Toast.LENGTH_LONG).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0) {
+                    Intent myIntent = new Intent(view.getContext(), Relax1.class);
+                    startActivityForResult(myIntent, 0);
+                }
+
+                if (position == 1) {
+                    Intent myIntent = new Intent(view.getContext(), Relax2.class);
+                    startActivityForResult(myIntent, 0);
+                }
+
+                if (position == 2) {
+                    Intent myIntent = new Intent(view.getContext(), Relax3.class);
+                    startActivityForResult(myIntent, 0);
+
+                }
+                if (position == 3) {
+                    Intent myIntent = new Intent(view.getContext(), Relax4.class);
+                    startActivityForResult(myIntent, 0);
+                }
             }
         });
     }
