@@ -65,7 +65,7 @@
         android:onClick="relaxHomeButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/projekti_nappitesti" />
+        app:srcCompat="@drawable/projekti_nappi4peini" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -78,6 +78,6 @@
         android:onClick="calendarHomeButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/projekti_nappi270px" />
+        app:srcCompat="@drawable/projekti_nappitesti" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

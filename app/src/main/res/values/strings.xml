@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">No Worries</string>
     <string name="start">START</string>
     <string name="greeting">"How's your day?"</string>
     <string name="great">GREAT</string>
@@ -8,4 +8,9 @@
     <string name="bad">BAD</string>
     <string name="awful">Awful</string>
     <string name="today">Today was…</string>
+    <string name="badday">Bad days</string>
+    <string name="greatday">Great days</string>
+    <string name="awfulday">Awful days</string>
+    <string name="notgreatday">Not greats</string>
+    <string name="finedays">Fine days</string>
 </resources>

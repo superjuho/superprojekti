@@ -9,12 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Relax4"></activity>
+        <activity android:name=".Breath"></activity>
+        <activity android:name=".Relax4" />
         <activity android:name=".Relax3" />
         <activity android:name=".Relax2" />
         <activity android:name=".Relax1" />
         <activity android:name=".Relax" />
-        <activity android:name=".Calendar" />
+        <activity
+            android:name=".Calendar"
+            android:parentActivityName=".Calm" />
         <activity android:name=".Calm" />
         <activity android:name=".MainActivity">
             <intent-filter>
