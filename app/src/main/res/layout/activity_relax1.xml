@@ -16,9 +16,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Toimi pliiiis"
+        android:text="Paniikkikohtaukset ovat ahdistavia, inhottavia ja kaikin puolin epämiellyttäviä kokemuksia. Tämän takia lähes jokainen kohtauksen kokenut pyrkii siihen, ettei seuraavaa kohtausta enää tulisi. Ensimmäiseksi keinoksi valitaan usein välttely.  Meille kaikille tavallisin reaktio ahdistavassa tilanteessa on pyrkiä tilanteesta pois, eli paeta. Tämä on hyvin ymmärrettävää, onhan paniikin yhtenä tarkoituksena auttaa meitä pakenemaan. Tilanteesta poistuminen tuo myös usein välittömän palkinnon, kun ahdistus poistuu.  Saatamme myös jo etukäteen vältellä tilanteita, joissa paniikkikohtauksia tyypillisesti esiintyy toivoen, että saisimme näin vältettyä kohtaukset. Lisäksi monet välttelevät paikkoja, joista pois pääsy kohtauksen sattuessa olisi haastavaa tai joissa kohtauksen saaminen olisi omasta mielestä noloa. Näitä ovat tyypillisesti julkiset paikat ja isot väkijoukot. Välttely toimii siis huonosti paniikkihäiriön hoidossa. Sen tilalle kannattaa siis keksiä muita keinoja selvitä paniikkikohtauksesta.  Mitä sitten kannattaisi tehdä, jos paniikkikohtaus iskee? Pitääkö vain odottaa, että kohtaus menee ohi, vai voiko oloaan helpottaa jotenkin? Seuraavien ohjeiden avulla sinun voi olla hieman helpompaa kestää paniikkikohtaus, voit päästä siitä yli nopeammin ja voit saada kohtauksen pysymään lievempänä. Voit poistua tilanteesta paniikkikohtauksen alkaessa. Esimerkiksi kaupassa voit vain jättää ostokset koriin ja kävellä ulos. On kuitenkin ensiarvoisen tärkeää, että palaat tilanteeseen kohtauksen loputtua! Vetäytyminen ei siis ole tilanteesta pakenemista, vaan tilapäinen ratkaisu."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
 </androidx.constraintlayout.widget.ConstraintLayout>

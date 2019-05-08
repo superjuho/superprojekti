@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Relax2">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Puhuminen auttaa saamaan ajatukset pois paniikkioireista. Voit jutella muille jostain aivan muusta asiasta kuin paniikistasi. Toisaalta esimerkiksi esiintymistilanteissa voit hyvin todeta ääneen, että sinua hermostuttaa. Taistele tai pakene –reaktio tuottaa ylimääräistä energiaa. Liikkumisen tai muun puuhailun avulla saat purettua tätä sen vastustamisen sijaan. Valitse mikä tahansa itsellesi sopiva tapa purkaa enerigaa. Lähde kävelylle, tiskaa tai käy työpaikan taukotilassa. Kiinnitä huomio asioihin, mitä näet ympärilläsi. Esimerkiksi kaupassa tarkastele yksityiskohtaisesti sitä, mitä näet hyllyssä tai lue aikakauslehden otsikoita. Voit luetella näkemiäsi asioita mielessäsi tähän tyyliin: ”punainen ostoskori, naisen kuva muropaketissa, vastaantulijan keltainen takki…”. Tämä voi tuntua hassulta, mutta se auttaa pitämään ajatukset tässä hetkessä ja sitä kautta estää katastrofitulkintojen miettimisen."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
