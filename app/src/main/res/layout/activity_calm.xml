@@ -125,12 +125,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="30dp"
-        android:background="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/awful"
-        app:srcCompat="@drawable/projekti_nappitesti" />
+        android:background="@null"
+        app:srcCompat="@drawable/projekti_nappi4peini" />
 
     <ImageButton
         android:id="@+id/imageButton6"
@@ -146,5 +146,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton4"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/projekti_nappi4peini" />
+        app:srcCompat="@drawable/projekti_nappitesti" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,5 +32,8 @@ Button start;
     public void relaxHomeButtonClick (View v) {
         startActivity(new Intent(MainActivity.this, Relax.class));
     }
+    public void breathHomeButtonClick (View v) {
+        startActivity(new Intent(MainActivity.this, Breath.class));
+    }
 }
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFC107"
     tools:context=".Relax3">
 
     <TextView
@@ -18,6 +19,23 @@
         android:layout_marginBottom="8dp"
         android:text="Arjessa kohtaamamme tilanteet herättävät meissä erilaisia tunteita. Tunteet viriävät niin nopeasti ja automaattisesti, että ajattelemme helposti niiden olevan suoraa seurausta ulkoisista tapahtumista. Näin ei kuitenkaan ole, vaan ajatuksemme ja tulkintamme tilanteesta vaikuttavat siihen, mitä tunnemme.  Ihminen, joka ajattelee ennen tärkeää palaveria ”pystyn esittämään asiani vakuuttavasti” ei todennäköisesti koe jännitystä ja ahdistusta samassa määrin kuin sellainen, jonka ajatuksena on ”voi ei, kaikki varmaan pitävät minua epäpätevänä”. Erilaiset ajatukset ja tunteet puolestaan saavat meidät käyttäytymään samassa tilanteessa eri tavoin: omaan vakuuttavuuteensa uskova ihminen todennäköisesti myös käyttäytyy tilanteessa itsevarmemmin.  Ajatukset, tunteet ja toiminta ovat siis jatkuvasti yhteydessä toisiinsa. Muuttamalla toimintatapojasi voit vaikuttaa ajatuksiisi ja tunteisiisi. Vastaavasti muokkaamalla ajattelumallejaan voi vaikuttaa omiin tunteisiinsa ja muuttaa käyttäytymistään.  "
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Ahdistus"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
