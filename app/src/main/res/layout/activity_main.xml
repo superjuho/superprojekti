@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFC107"
     tools:context=".MainActivity">
 
     <TextView
@@ -45,11 +46,12 @@
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:layout_marginBottom="32dp"
+        android:background="@null"
         android:onClick="calendarHomeButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        android:background="@null"
         app:srcCompat="@drawable/projekti_nappi170px" />
 
     <ImageButton

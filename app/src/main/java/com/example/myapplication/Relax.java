@@ -1,11 +1,15 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +27,7 @@ public class Relax extends AppCompatActivity {
 
 
     private void populateListView() {
-        String[] myItems = {"Toiminta paniikkikohtauksen aikana", "Paniikkikohtauksen ennaltaehkäisy", "Ahdistus", "Stressi"};
+        String[] myItems = {"Paniikkikohtaus", "Unettomuus", "Ahdistus", "Stressi"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter(
                 this,
@@ -59,5 +63,6 @@ public class Relax extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

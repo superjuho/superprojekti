@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFC107"
     tools:context=".Relax2">
 
     <TextView
@@ -15,8 +16,26 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Puhuminen auttaa saamaan ajatukset pois paniikkioireista. Voit jutella muille jostain aivan muusta asiasta kuin paniikistasi. Toisaalta esimerkiksi esiintymistilanteissa voit hyvin todeta ääneen, että sinua hermostuttaa. Taistele tai pakene –reaktio tuottaa ylimääräistä energiaa. Liikkumisen tai muun puuhailun avulla saat purettua tätä sen vastustamisen sijaan. Valitse mikä tahansa itsellesi sopiva tapa purkaa enerigaa. Lähde kävelylle, tiskaa tai käy työpaikan taukotilassa. Kiinnitä huomio asioihin, mitä näet ympärilläsi. Esimerkiksi kaupassa tarkastele yksityiskohtaisesti sitä, mitä näet hyllyssä tai lue aikakauslehden otsikoita. Voit luetella näkemiäsi asioita mielessäsi tähän tyyliin: ”punainen ostoskori, naisen kuva muropaketissa, vastaantulijan keltainen takki…”. Tämä voi tuntua hassulta, mutta se auttaa pitämään ajatukset tässä hetkessä ja sitä kautta estää katastrofitulkintojen miettimisen."
+        android:text="Elämäntavat vaikuttavat uneen: on hyvä tarkistaa, ovatko kofeiinin, nikotiinin tai alkoholin käyttö, ruokavalio ja liikunta oikeissa mittasuhteissa. Arvioi myös omaa ajankäyttöäsi: jääkö sinulle riittävästi aikaa hoitaa sosiaalisia suhteita, liikkua tai pitää hauskaa? Unettomuus liittyy usein päiväaikaiseen toimintaamme. Se mitä teemme tai jätämme tekemättä päivällä altistaa meidät usein myös huonolle nukkumiselle. Voit tarkastella unettomuuttasi kysymyksellä: ”Jos unettomuutesi olisikin ystäväsi, niin mitä se yrittäisi sinulle kertoa?” Usein ihmiset vastaavat tähän kysymykseen: ”Pitäisi tehdä vähemmän töitä, ”olla läheisten ihmisten kanssa enemmän”, ”tehdä jotain sellaista, mikä olisi omien arvojen mukaista”, ”opetella olemaan eikä koko ajan tehdä tai suorittaa jotain”. Välillä myös tekemättömyys aiheuttaa unettomuutta. Liiallinen istuminen ja liikunnan puute lisäävät unettomuutta."
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="125dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Unettomuus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

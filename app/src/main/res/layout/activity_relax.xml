@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:background="#FFC107"
+    android:orientation="vertical">
 
     <ListView
         android:id="@+id/relaxlist"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        style="@style/Widget.AppCompat.Light.ListView.DropDown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="100dp"
+        android:background="#FFC107"
+        android:divider="@android:drawable/button_onoff_indicator_on"
+        android:dividerHeight="@android:dimen/notification_large_icon_height"
         android:drawSelectorOnTop="false" />
 </LinearLayout>
