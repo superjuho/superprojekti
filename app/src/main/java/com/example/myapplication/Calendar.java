@@ -29,7 +29,7 @@ public class Calendar extends AppCompatActivity {
     private static boolean awfulPressed = false;
     private static boolean calendarHomeButtonPressed = false;
     private Counter counter;
-    private String greats, fines, ngreats, bads, awfuls;
+
 
 
 
@@ -62,6 +62,22 @@ public class Calendar extends AppCompatActivity {
 
         String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
 
+        SharedPreferences mPrefs = getSharedPreferences("label",0);
+        int mInt = mPrefs.getInt("greats", 0); // 0 = value if var not found
+        SharedPreferences nPrefs = getSharedPreferences("label1", 0);
+        int nInt =nPrefs.getInt("fines", 0);
+        SharedPreferences bPrefs = getSharedPreferences("label2", 0);
+        int bInt = bPrefs.getInt("ngreats", 0); // 0 = value if var not found
+        SharedPreferences vPrefs = getSharedPreferences("label3", 0);
+        int vInt =vPrefs.getInt("bads", 0);
+        SharedPreferences cPrefs = getSharedPreferences("label4", 0);
+        int cInt =cPrefs.getInt("awfuls", 0);
+
+
+
+
+
+
         if (greatPressed) {
             dayzList.add(dayzList.size(),"Great day!\n" + date);
             days.setBackgroundColor(Color.parseColor("#161fff"));
@@ -69,7 +85,9 @@ public class Calendar extends AppCompatActivity {
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             counter.addGreats();
-
+            SharedPreferences.Editor mEditor = mPrefs.edit();
+            mEditor.putInt("greats", counter.getGreats());
+            mEditor.apply();
             greatPressed = false;
         } else if (awfulPressed) {
             dayzList.add(dayzList.size(),"Awful day\n" + date);
@@ -78,7 +96,8 @@ public class Calendar extends AppCompatActivity {
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             counter.addAwfuls();
-
+            SharedPreferences.Editor cEditor = cPrefs.edit();
+            cEditor.putInt("awfuls", counter.getAwfuls()).apply();
             awfulPressed = false;
         } else if (finePressed) {
             dayzList.add(dayzList.size(),"Fine day\n" + date);
@@ -87,7 +106,8 @@ public class Calendar extends AppCompatActivity {
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             counter.addFines();
-
+            SharedPreferences.Editor nEditor = nPrefs.edit();
+            nEditor.putInt("fines", counter.getFines()).apply();
             finePressed = false;
         } else if (notGreatPressed) {
             dayzList.add(dayzList.size(),"Not great..\n" + date);
@@ -96,7 +116,8 @@ public class Calendar extends AppCompatActivity {
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             counter.addNgreats();
-
+            SharedPreferences.Editor bEditor = bPrefs.edit();
+            bEditor.putInt("ngreats", counter.getNgreats()).apply();
             notGreatPressed = false;
         } else if (badPressed) {
             dayzList.add(dayzList.size(),"Bad day\n" + date);
@@ -105,6 +126,8 @@ public class Calendar extends AppCompatActivity {
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
             counter.addBads();
+            SharedPreferences.Editor vEditor = vPrefs.edit();
+            vEditor.putInt("bads", counter.getBads()).apply();
 
             badPressed = false;
         } else if (calendarHomeButtonPressed) {
@@ -122,27 +145,7 @@ public class Calendar extends AppCompatActivity {
             editor.putStringSet("DATE_LIST", set);
             editor.apply();
 
-        SharedPreferences mPrefs = getSharedPreferences("label", 0);
-        int mInt = mPrefs.getInt("greats", counter.getGreats()); // 0 = value if var not found
-        SharedPreferences nPrefs = getSharedPreferences("label1", 0);
-        int nInt =nPrefs.getInt("fines", counter.getFines());
-        SharedPreferences bPrefs = getSharedPreferences("label2", 0);
-        int bInt = bPrefs.getInt("ngreats", counter.getNgreats()); // 0 = value if var not found
-        SharedPreferences vPrefs = getSharedPreferences("label3", 0);
-        int vInt =vPrefs.getInt("bads", counter.getBads());
-        SharedPreferences cPrefs = getSharedPreferences("label4", 0);
-        int cInt =cPrefs.getInt("awfuls", counter.getAwfuls());
 
-        SharedPreferences.Editor mEditor = mPrefs.edit();
-        mEditor.putInt("greats", counter.getGreats()).apply();
-        SharedPreferences.Editor nEditor = nPrefs.edit();
-        nEditor.putInt("fines", counter.getFines()).apply();
-        SharedPreferences.Editor bEditor = bPrefs.edit();
-        bEditor.putInt("ngreats", counter.getNgreats()).apply();
-        SharedPreferences.Editor vEditor = vPrefs.edit();
-        vEditor.putInt("bads", counter.getBads()).apply();
-        SharedPreferences.Editor cEditor = cPrefs.edit();
-        cEditor.putInt("awfuls", counter.getAwfuls()).apply();
 
 
             great.setText(String.valueOf(mInt));

@@ -7,7 +7,11 @@ public class Counter {
     private int greats, fines, ngreats, bads, awfuls;
 
     public Counter (){
-
+        greats = 0;
+        fines = 0;
+        ngreats = 0;
+        bads = 0;
+        awfuls = 0;
     }
 
     public void addGreats() {
