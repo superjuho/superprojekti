@@ -23,6 +23,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
+/**
+ * Luokassa tulee esille käyttäjän valitsemat päivän "moodit" jotka jäsentyvät gridviewiin päivämäärän kanssa
+ * @author Juho Puurunen
+ * @version 0.8 5/2019
+ */
+
 public class Calendar extends AppCompatActivity {
     private static boolean greatPressed = false;
     private static boolean finePressed = false;
@@ -134,7 +140,7 @@ public class Calendar extends AppCompatActivity {
 
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
-            set.addAll(dayzList);
+            dayzList.addAll(set);
             calendarHomeButtonPressed = false;
 
         }
@@ -143,7 +149,7 @@ public class Calendar extends AppCompatActivity {
         editor.putStringSet("DATE_LIST", set);
         editor.apply();
 
-            
+
 
             great.setText(String.valueOf(mInt));
             awful.setText(String.valueOf(cInt));
