@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFC107"
+    android:background="@android:color/background_light"
     android:orientation="vertical">
 
     <ListView
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="100dp"
-        android:background="#FFC107"
+        android:background="@android:color/background_light"
         android:divider="@android:drawable/button_onoff_indicator_on"
         android:dividerHeight="@android:dimen/notification_large_icon_height"
         android:drawSelectorOnTop="false" />
