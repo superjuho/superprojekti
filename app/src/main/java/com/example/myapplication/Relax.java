@@ -23,7 +23,7 @@ public class Relax extends AppCompatActivity {
 
 
     private void populateListView() {
-        String[] myItems = {"Toiminta paniikkikohtauksen aikana", "Paniikkikohtauksen ennaltaehkäisy", "Relax3", "Relax4"};
+        String[] myItems = {"Toiminta paniikkikohtauksen aikana", "Paniikkikohtauksen ennaltaehkäisy", "Ahdistus", "Stressi"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter(
                 this,
