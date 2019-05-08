@@ -13,6 +13,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Relax luokassa on lista ahdistukseen, stressiin ja paniikkikohtauksiin liittyvistä tiedoista.
+ * @author Tomi Eränne
+ */
 
 public class Relax extends AppCompatActivity {
 
