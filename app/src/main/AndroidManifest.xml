@@ -14,7 +14,8 @@
         <activity android:name=".Relax2" />
         <activity android:name=".Relax1" />
         <activity android:name=".Relax" />
-        <activity android:name=".Calendar" />
+        <activity android:name=".Calendar"
+            android:parentActivityName=".Calm"/>
         <activity android:name=".Calm" />
         <activity android:name=".MainActivity">
             <intent-filter>
