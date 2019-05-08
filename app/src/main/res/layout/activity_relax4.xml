@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Relax4">
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Kiire on eri asia kuin kiireen tuntu. Joillekin täysinäinen kalenteri antaa virtaa, mutta toisia se stressaa. Jälkimmäisessä tapauksessa kannattaa miettiä, mikä omassa elämässä luo kiireen tunnun ja ovatko ne asiat kiireen arvoisia. Entä onko arjessa oikeasti paljon tai vaikeita asioita tehtävänä? Jos on, itsemyötätunto auttaa. Kukaan ei voi tehdä enempää kuin mihin pystyy ja riittää.  Oma tapa suhtautua kiireeseen stressaa. Kielteisiin ajatuksiin tarttuminen lisää kielteisiä ajatuksia. Ja jos jatkuvasti ajattelee, ettei tästä tule mitään, ei ennen pitkää tulekaan.  Riittävä palautuminen arjen rasituksista auttaa laskemaan kierroksia. Palautumisesta kannattaisi huolehtia pitkin päivää. "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

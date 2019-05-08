@@ -47,4 +47,7 @@ public class Calm extends AppCompatActivity {
         Calendar.calendarHomeButtonPressed();
         startActivity(new Intent(Calm.this, Calendar.class));
     }
+    public void relaxHomeButtonClick (View v) {
+        startActivity(new Intent(Calm.this, Relax.class));
+    }
 }
