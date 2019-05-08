@@ -8,6 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Luokka tarjoaa käyttäjälle viisi valittavaa fiilistä, jotka lisätä omaan kalenteriin
+ * @author Juho Puurunen
+ * @version 1.0 5/2019
+ */
 public class Calm extends AppCompatActivity {
 
 
