@@ -28,7 +28,8 @@ public class Calendar extends AppCompatActivity {
     private static boolean badPressed = false;
     private static boolean awfulPressed = false;
     private static boolean calendarHomeButtonPressed = false;
-    private Counter counter;
+
+    static int greats, fines, ngreats, bads, awfuls;
 
 
 
@@ -40,7 +41,7 @@ public class Calendar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
         shared = getSharedPreferences("App_settings", MODE_PRIVATE);
-        counter = new Counter();
+
         GridView days = findViewById(R.id.Calendar);
         TextView great = findViewById(R.id.greatdays);
         TextView fine = findViewById(R.id.finedays);
@@ -63,20 +64,29 @@ public class Calendar extends AppCompatActivity {
         String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
 
         SharedPreferences mPrefs = getSharedPreferences("label",0);
-        int mInt = mPrefs.getInt("greats", 0); // 0 = value if var not found
+        int mInt = mPrefs.getInt("greats",0);
         SharedPreferences nPrefs = getSharedPreferences("label1", 0);
         int nInt =nPrefs.getInt("fines", 0);
         SharedPreferences bPrefs = getSharedPreferences("label2", 0);
-        int bInt = bPrefs.getInt("ngreats", 0); // 0 = value if var not found
+        int bInt = bPrefs.getInt("ngreats", 0);
         SharedPreferences vPrefs = getSharedPreferences("label3", 0);
         int vInt =vPrefs.getInt("bads", 0);
         SharedPreferences cPrefs = getSharedPreferences("label4", 0);
         int cInt =cPrefs.getInt("awfuls", 0);
 
+        greats = mInt;
+        fines = nInt;
+        ngreats = bInt;
+        bads = vInt;
+        awfuls = cInt;
 
-
-
-
+        if(dayzList.size() == 0) {
+            greats = 0;
+            fines = 0;
+            ngreats = 0;
+            bads = 0;
+            awfuls = 0;
+        }
 
         if (greatPressed) {
             dayzList.add(dayzList.size(),"Great day!\n" + date);
@@ -84,10 +94,10 @@ public class Calendar extends AppCompatActivity {
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
-            counter.addGreats();
-            SharedPreferences.Editor mEditor = mPrefs.edit();
-            mEditor.putInt("greats", counter.getGreats());
-            mEditor.apply();
+            greats++;
+            final SharedPreferences.Editor mEditor = mPrefs.edit();
+            mEditor.putInt("greats", greats);
+            mEditor.commit();
             greatPressed = false;
         } else if (awfulPressed) {
             dayzList.add(dayzList.size(),"Awful day\n" + date);
@@ -95,9 +105,9 @@ public class Calendar extends AppCompatActivity {
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
-            counter.addAwfuls();
-            SharedPreferences.Editor cEditor = cPrefs.edit();
-            cEditor.putInt("awfuls", counter.getAwfuls()).apply();
+            awfuls++;
+            final SharedPreferences.Editor cEditor = cPrefs.edit();
+            cEditor.putInt("awfuls", awfuls).commit();
             awfulPressed = false;
         } else if (finePressed) {
             dayzList.add(dayzList.size(),"Fine day\n" + date);
@@ -105,9 +115,9 @@ public class Calendar extends AppCompatActivity {
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
-            counter.addFines();
-            SharedPreferences.Editor nEditor = nPrefs.edit();
-            nEditor.putInt("fines", counter.getFines()).apply();
+            fines++;
+            final SharedPreferences.Editor nEditor = nPrefs.edit();
+            nEditor.putInt("fines", fines).commit();
             finePressed = false;
         } else if (notGreatPressed) {
             dayzList.add(dayzList.size(),"Not great..\n" + date);
@@ -115,9 +125,9 @@ public class Calendar extends AppCompatActivity {
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
-            counter.addNgreats();
-            SharedPreferences.Editor bEditor = bPrefs.edit();
-            bEditor.putInt("ngreats", counter.getNgreats()).apply();
+            ngreats++;
+            final SharedPreferences.Editor bEditor = bPrefs.edit();
+            bEditor.putInt("ngreats", ngreats).commit();
             notGreatPressed = false;
         } else if (badPressed) {
             dayzList.add(dayzList.size(),"Bad day\n" + date);
@@ -125,9 +135,9 @@ public class Calendar extends AppCompatActivity {
             gridViewArrayAdapter.notifyDataSetChanged();
             Set<String> set = shared.getStringSet("DATE_LIST", null);
             dayzList.addAll(set);
-            counter.addBads();
-            SharedPreferences.Editor vEditor = vPrefs.edit();
-            vEditor.putInt("bads", counter.getBads()).apply();
+            bads++;
+            final SharedPreferences.Editor vEditor = vPrefs.edit();
+            vEditor.putInt("bads", bads).commit();
 
             badPressed = false;
         } else if (calendarHomeButtonPressed) {
@@ -154,7 +164,9 @@ public class Calendar extends AppCompatActivity {
             notgreat.setText(String.valueOf(bInt));
             bad.setText(String.valueOf(vInt));
 
-
+            Log.d("tääl", String.valueOf(awfuls));
+            Log.d("tääl",String.valueOf(cInt));
+            Log.d("tääl", String.valueOf(greats));
 
 
     }
@@ -163,12 +175,10 @@ public class Calendar extends AppCompatActivity {
 
     public static void greatPressed() {
         greatPressed = true;
-
     }
 
     public static void awfulPressed() {
         awfulPressed = true;
-
     }
 
     public static void finePressed() {
