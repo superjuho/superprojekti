@@ -55,4 +55,8 @@ public class Calm extends AppCompatActivity {
     public void relaxHomeButtonClick (View v) {
         startActivity(new Intent(Calm.this, Relax.class));
     }
+
+    public void breathHomeButtonClick (View v) {
+        startActivity(new Intent(Calm.this, Breath.class));
+    }
 }

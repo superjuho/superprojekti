@@ -25,6 +25,7 @@ import java.util.Set;
 
 /**
  * Luokassa tulee esille käyttäjän valitsemat päivän "moodit" jotka jäsentyvät gridviewiin päivämäärän kanssa
+ * Luokassa myös laskuri joka laskee ja ilmoittaa erilaisten päivien määrät gridin alapuolella.
  * @author Juho Puurunen
  * @version 0.8 5/2019
  */

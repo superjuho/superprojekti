@@ -13,4 +13,7 @@
     <string name="awfulday">Awful days</string>
     <string name="notgreatday">Not greats</string>
     <string name="finedays">Fine days</string>
+    <string name="rhome">RelaxHomeButton</string>
+    <string name="chome">CalendarHomeButton</string>
+    <string name="bhome">BreathHomeButton</string>
 </resources>
