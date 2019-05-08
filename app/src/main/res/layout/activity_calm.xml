@@ -130,7 +130,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/awful"
         android:background="@null"
-        app:srcCompat="@drawable/projekti_nappi270px" />
+        app:srcCompat="@drawable/projekti_nappi4peini" />
 
     <ImageButton
         android:id="@+id/imageButton6"
