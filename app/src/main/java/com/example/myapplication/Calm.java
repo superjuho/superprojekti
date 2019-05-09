@@ -23,7 +23,7 @@ public class Calm extends AppCompatActivity {
 
 
     }
-
+        // Alla nappuloiden funktiot, ne käynnistävät Calender Classissa halutun syötön kalenterille.
     public void greatClick(View v) {
         Calendar.greatPressed();
         startActivity(new Intent(Calm.this, Calendar.class));
@@ -47,7 +47,7 @@ public class Calm extends AppCompatActivity {
         Calendar.badPressed();
         startActivity(new Intent(Calm.this, Calendar.class));
     }
-
+    // Valikko nappuloiden aktiviteettien käynnistykset. 
     public void calendarHomeButtonClick(View v) {
         Calendar.calendarHomeButtonPressed();
         startActivity(new Intent(Calm.this, Calendar.class));

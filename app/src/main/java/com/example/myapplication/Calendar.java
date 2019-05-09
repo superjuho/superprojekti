@@ -57,22 +57,22 @@ public class Calendar extends AppCompatActivity {
         TextView notgreat = findViewById(R.id.notgreatdays);
         TextView bad = findViewById(R.id.baddays);
         TextView awful = findViewById(R.id.awfuldays);
-        String[] dayz = new String[] {
+        String[] dayz = new String[] { // Arrayn luominen tyhjänä.
 
         };
 
 
 
-        List<String> dayzList = new ArrayList<String>(Arrays.asList(dayz));
+        List<String> dayzList = new ArrayList<String>(Arrays.asList(dayz)); // Arrayn listaan muodostaminen.
 
-        ArrayAdapter<String> gridViewArrayAdapter = new ArrayAdapter<>
+        ArrayAdapter<String> gridViewArrayAdapter = new ArrayAdapter<> // ArrayListin vieminen Gridille.
                 (this, android.R.layout.simple_list_item_1, dayzList);
 
         days.setAdapter(gridViewArrayAdapter);
 
-        String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date()); // Päivä määrän noutaminen ja syöttö date stringiin.
 
-       SharedPreferences mPrefs = getSharedPreferences("label",0);
+       SharedPreferences mPrefs = getSharedPreferences("label",0); // Counterien tallennus int luonti ja SharedPreferenssin määritys.
         int mInt = mPrefs.getInt("greats",0);
         SharedPreferences nPrefs = getSharedPreferences("label1", 0);
         int nInt =nPrefs.getInt("fines", 0);
@@ -84,7 +84,8 @@ public class Calendar extends AppCompatActivity {
         int cInt =cPrefs.getInt("awfuls", 0);
 
 
-
+            // Tässä kohtaa koodiaa, katsotaan mitä nappulaa käyttäjä on painanut ja viedään haluttu "moodi" listaan, ja tallennetaan sharedprefenssiin.
+            // Counteri lisää myös ja tallentaa lukumäärän.
         if (greatPressed) {
             dayzList.add(dayzList.size(),"Great day!\n" + date);
             days.setBackgroundColor(Color.parseColor("#161fff"));
@@ -145,13 +146,13 @@ public class Calendar extends AppCompatActivity {
             calendarHomeButtonPressed = false;
 
         }
-        SharedPreferences.Editor editor = shared.edit();
+        SharedPreferences.Editor editor = shared.edit(); // Listan sisällön hakeminen tallennetuista tiedoista.
         Set<String> set = new HashSet<>(dayzList);
         editor.putStringSet("DATE_LIST", set);
         editor.apply();
 
 
-
+            // Counterin tulosten syöttäminen TextVieweihin.
             great.setText(String.valueOf(mInt));
             awful.setText(String.valueOf(cInt));
             fine.setText(String.valueOf(nInt));
@@ -162,7 +163,7 @@ public class Calendar extends AppCompatActivity {
     }
 
 
-
+        // Nappuloiden komennot.
     public static void greatPressed() {
         greatPressed = true;
     }
