@@ -58,7 +58,7 @@ public class Calendar extends AppCompatActivity {
         TextView bad = findViewById(R.id.baddays);
         TextView awful = findViewById(R.id.awfuldays);
         String[] dayz = new String[] {
-            "Mitä tääl tapahtuu",
+
         };
 
 
