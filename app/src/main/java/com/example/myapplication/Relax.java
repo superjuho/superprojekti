@@ -25,15 +25,16 @@ public class Relax extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relax);
 
-        populateListView();
+        populateListView(); //tehdään lista kun activity aukeaa
         registerClickCallback();
     }
+
 
 
     private void populateListView() {
         String[] myItems = {"Paniikkikohtaus", "Unettomuus", "Ahdistus", "Stressi"};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter(
+        ArrayAdapter<String> adapter = new ArrayAdapter( //Array adapteri ListViewille
                 this,
                 R.layout.relaxlist,
                 myItems);
@@ -45,8 +46,8 @@ public class Relax extends AppCompatActivity {
         ListView list = findViewById(R.id.relaxlist);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {   //onClickItem lukee painetun komponentin position
+                if(position == 0) {                                                              //ja sen mukaan avaa uuden activityn
                     Intent myIntent = new Intent(view.getContext(), Relax1.class);
                     startActivityForResult(myIntent, 0);
                 }
