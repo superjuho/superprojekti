@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_margin="100dp"
         android:background="@android:color/background_light"
-        android:divider="@android:drawable/button_onoff_indicator_on"
+        android:divider="@drawable/projekti_nappitausta"
         android:dividerHeight="@android:dimen/notification_large_icon_height"
         android:drawSelectorOnTop="false" />
 </LinearLayout>
